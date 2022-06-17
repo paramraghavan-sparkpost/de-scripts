@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function geoiptest {
     local geoip_test_email='param.raghavan@sparkpost.com'
     local geoip_test_dt=`date +"%m-%d-%Y"`
@@ -50,5 +52,14 @@ function send_test_email {
     fi
 
 }
-
-geoiptest eu
+echo $1
+if [ "$1" == "stg" ]; then
+  geoiptest stg
+elif [ $1 == 'prd' ]; then
+  geoiptest  prd
+elif  [ $1 == 'eu' ]; then
+  # for eu make sure you are connected to corpvpn
+  geoiptest  eu
+else
+  echo 'USAGE: geoiptest ENV [test]\nENV must be stg, prd, or eu\nIf "test" is passed no CURL commands will be run instead they will be printed'
+fi
