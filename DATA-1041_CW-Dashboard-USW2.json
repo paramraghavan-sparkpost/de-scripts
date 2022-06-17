@@ -1,0 +1,183 @@
+{
+    "widgets": [
+        {
+            "height": 8,
+            "width": 24,
+            "y": 24,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ "AWS/SQS", "ApproximateNumberOfMessagesVisible", "QueueName", "sqs-etl-de-ab-testing-dlq-usw2-prd" ],
+                    [ "...", "sqs-de-data-privacy-close-rtbf-dlq-usw2-prd" ],
+                    [ "...", "sqs-de-data-privacy-delete-prefixes-dlq-usw2-prd" ],
+                    [ "...", "sqs-de-pipeline-metrics-prd-metrics-etl-dlq-usw2-prd" ],
+                    [ "...", "sqs-de-proofpoint-bounces-dlq-usw2-prd" ],
+                    [ "...", "sqs-de-proofpoint-deliveries-dlq-usw2-prd" ],
+                    [ "...", "sqs-de-rawdata-lambda-dlq-dispatch-usw2-prd" ],
+                    [ "...", "sqs-de-rawdata-lambda-dlq-usw2-prd" ],
+                    [ "...", "sqs-de-webhooks-deactivate-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-ab-testing-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-account-usage-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-data-lake-rawdata-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-dlq-industry-benchmarks-metrics-etl-usw2-prd" ],
+                    [ "...", "sqs-etl-de-enrichment-lookup-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-enrichment-lookup-retry-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-et-nginx-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-events-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-events-ingest-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-events-replay-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-firehose-transform-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-ieh-raw-lambda-json-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-inbox-tracker-enrichment-lookup-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-inbox-tracker-enrichment-storage-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-inbox-tracker-metrics-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-inbox-tracker-metrics-seed-arrival-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-inbox-tracker-metrics-seed-start-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-it-campaign-parquet-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-it-engagement-parquet-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-it-inbox-parquet-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-it-seed-parquet-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-message-events-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-metrics-rollups-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-metrics-sending-domain-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-s3-pipeline-sns-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-spam-trap-hits-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-spam-trap-passive-pipeline-dns-lk-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-suppressions-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-transmission-lambda-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-webhooks-batch-status-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-webhooks-pipeline-dispatcher-dlq-usw2-prd" ],
+                    [ "...", "sqs-etl-de-webhooks-pipeline-dlq-usw2-prd" ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "title": "DLQ",
+                "period": 300,
+                "legend": {
+                    "position": "right"
+                }
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 0,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ "AWS/Lambda", "Errors", "FunctionName", "de-pipeline-account-usage-prd-etl-lambda" ],
+                    [ "...", "de-pipeline-events-prd-events-etl-lambda" ],
+                    [ "...", "de-pipeline-message-events-prd-message-events-etl" ],
+                    [ "...", "de-pipeline-metrics-prd-metrics-etl" ],
+                    [ "...", "de-pipeline-metrics-prd-rollup-metrics-etl" ],
+                    [ "...", "de-pipeline-suppressions-prd-loader" ],
+                    [ "...", "de-pipeline-webhooks-prd-dispatcher" ],
+                    [ "...", "de-pipeline-webhooks-prd-loader" ],
+                    [ "...", "de-enrichment-prd-storage" ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "stat": "Sum",
+                "period": 60,
+                "title": "Lambda Errors",
+                "legend": {
+                    "position": "right"
+                }
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 6,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ "S3 Data Pipeline", "Iterator Age", "Consumer", "lambda-account_usage-prd" ],
+                    [ "...", "lambda-events-prd" ],
+                    [ "...", "lambda-message_events-prd" ],
+                    [ "...", "lambda-metrics-prd" ],
+                    [ "...", "lambda-suppression-prd" ],
+                    [ "...", "lambda-webhooks-prd" ],
+                    [ "Enrichment", ".", ".", "lambda-storage-prd" ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "title": "Avg Iterator Age",
+                "legend": {
+                    "position": "right"
+                },
+                "period": 60,
+                "stat": "Average"
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 18,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ "AWS/SQS", "ApproximateAgeOfOldestMessage", "QueueName", "sqs-etl-de-account-usage-usw2-prd" ],
+                    [ "...", "sqs-etl-de-enrichment-storage-usw2-prd" ],
+                    [ "...", "sqs-etl-de-events-usw2-prd" ],
+                    [ "...", "sqs-etl-de-ieh-raw-lambda-json-usw2-prd" ],
+                    [ "...", "sqs-etl-de-message-events-usw2-prd" ],
+                    [ "...", "sqs-etl-de-metrics-rollups-usw2-prd" ],
+                    [ "...", "sqs-etl-de-metrics-usw2-prd" ],
+                    [ "...", "sqs-etl-de-rawdata-lambda-dispatch-usw2-prd" ],
+                    [ "...", "sqs-etl-de-rawdata-lambda-json-usw2-prd" ],
+                    [ "...", "sqs-etl-de-rawdata-lambda-usw2-prd" ],
+                    [ "...", "sqs-etl-de-suppressions-usw2-prd" ],
+                    [ "...", "sqs-etl-de-webhooks-pipeline-usw2-prd" ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "title": "SQS Oldest",
+                "period": 300,
+                "legend": {
+                    "position": "right"
+                }
+            }
+        },
+        {
+            "height": 6,
+            "width": 24,
+            "y": 12,
+            "x": 0,
+            "type": "metric",
+            "properties": {
+                "metrics": [
+                    [ "AWS/SQS", "ApproximateNumberOfMessagesVisible", "QueueName", "sqs-etl-de-account-usage-usw2-prd" ],
+                    [ "...", "sqs-etl-de-enrichment-storage-usw2-prd" ],
+                    [ "...", "sqs-etl-de-events-usw2-prd" ],
+                    [ "...", "sqs-etl-de-ieh-raw-lambda-json-usw2-prd" ],
+                    [ "...", "sqs-etl-de-message-events-usw2-prd" ],
+                    [ "...", "sqs-etl-de-metrics-rollups-usw2-prd" ],
+                    [ "...", "sqs-etl-de-metrics-usw2-prd" ],
+                    [ "...", "sqs-etl-de-rawdata-lambda-dispatch-usw2-prd" ],
+                    [ "...", "sqs-etl-de-rawdata-lambda-json-usw2-prd" ],
+                    [ "...", "sqs-etl-de-suppressions-usw2-prd" ],
+                    [ "...", "sqs-etl-de-rawdata-lambda-usw2-prd" ],
+                    [ "...", "sqs-etl-de-webhooks-pipeline-usw2-prd" ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-west-2",
+                "title": "SQS Num Visible",
+                "period": 60,
+                "legend": {
+                    "position": "right"
+                },
+                "stat": "Average"
+            }
+        }
+    ]
+}
